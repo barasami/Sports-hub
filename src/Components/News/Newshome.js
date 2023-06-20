@@ -7,13 +7,12 @@ function Newshome() {
         myNews()
         .then(({data})=>{
             setNews(data)
-            console.log(data);
         })
     },[])
 
     const myalNews=news?.map(({Title,Image,NewsLink,PublisherDate,PublisherLogo,PublisherName})=>{
       return(
-        <div>
+        <div key={Title}>
           <div>
             <div>
               {Title}
@@ -23,6 +22,9 @@ function Newshome() {
             </div>
             <div>
               <img src={PublisherLogo} alt={PublisherName}/> <span>{PublisherName}</span>
+            </div>
+            <div>
+              <img src={Image} alt={PublisherName}/>
             </div>
             <div>
               <a href={NewsLink}>Link</a>
