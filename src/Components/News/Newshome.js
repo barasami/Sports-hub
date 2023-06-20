@@ -10,8 +10,35 @@ function Newshome() {
             console.log(data);
         })
     },[])
+
+    const myalNews=news?.map(({Title,Image,NewsLink,PublisherDate,PublisherLogo,PublisherName})=>{
+      return(
+        <div>
+          <div>
+            <div>
+              {Title}
+            </div>
+            <div>
+              {PublisherDate}
+            </div>
+            <div>
+              <img src={PublisherLogo} alt={PublisherName}/> <span>{PublisherName}</span>
+            </div>
+            <div>
+              <a href={NewsLink}>Link</a>
+            </div>
+          </div>
+        </div>
+      )
+    })
+
   return (
-    <div>Newshome</div>
+    <div>
+      <h2>News</h2>
+      <div>
+        {myalNews}
+      </div>
+    </div>
   )
 }
 
