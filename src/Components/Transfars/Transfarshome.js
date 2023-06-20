@@ -5,8 +5,10 @@ function Transfarshome() {
     const[romour,setRomour]=useState([])
     useEffect(()=>{
         nRomours()
-        .then((data)=>{
+        .then(({data})=>{
             setRomour(data)
+            console.log(data);
+            
         })
     },[])
   return (

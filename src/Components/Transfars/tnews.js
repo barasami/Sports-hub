@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 const Url='https://transfermarket.p.rapidapi.com/search'
 
@@ -12,6 +12,7 @@ const options = {
     'X-RapidAPI-Host': 'transfermarket.p.rapidapi.com'
   }
 };
+
 
 export const nRomours=async()=>{
     try{
