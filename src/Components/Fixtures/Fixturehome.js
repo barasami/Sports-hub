@@ -11,8 +11,7 @@ function Fixturehome() {
         })
     },[])
 
-    let me=fixture.Matchday1
-    console.log(me);
+   
   return (
     <div>Fixturehome</div>
   )

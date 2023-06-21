@@ -7,7 +7,6 @@ function Tablehome() {
         tableNews()
         .then(({data})=>{
             setTable(data)
-            console.log(data);
         })
     },[])
 
