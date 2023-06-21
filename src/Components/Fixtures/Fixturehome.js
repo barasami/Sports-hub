@@ -7,9 +7,12 @@ function Fixturehome() {
         myFixture()
         .then(({data})=>{
             setFixture(data)
-            // console.log(data);
+            console.log(data);
         })
     },[])
+
+    let me=fixture.Matchday1
+    console.log(me);
   return (
     <div>Fixturehome</div>
   )

@@ -7,7 +7,6 @@ function Transfarshome() {
         nRomours()
         .then(({data})=>{
             setRomour(data)
-            console.log(data);
             
         })
     },[])
@@ -30,13 +29,14 @@ function Transfarshome() {
 
     const players=myplayer?.map((data)=>{
 
-      const{playerImage,nationImage,playerName,club}=data
+      const{playerImage,nationImage,playerName,club,id}=data
       return(
-        <div>
-          <div>
-
-          </div>
-        </div>
+        <tr key={id}>
+          <td><img src={nationImage} alt={club}/></td>
+          <td><img src={playerImage} alt={club}/></td>
+          <td>{club}</td>
+          <td>{playerName}</td>
+        </tr>
       )
     })
   return (
@@ -44,6 +44,9 @@ function Transfarshome() {
       <h2>Transfers</h2>
       <div>
         {clubs}
+      </div>
+      <div>
+        {players}
       </div>
     </div>
   )
