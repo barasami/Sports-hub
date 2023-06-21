@@ -7,7 +7,7 @@ function Fixturehome() {
         myFixture()
         .then(({data})=>{
             setFixture(data)
-            console.log(data);
+            // console.log(data);
         })
     },[])
   return (

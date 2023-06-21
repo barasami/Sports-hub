@@ -6,7 +6,7 @@ function Tablehome() {
     useEffect(()=>{
         tableNews()
         .then((data)=>{
-            setTable(data)
+            // setTable(data)
         })
     },[])
   return (

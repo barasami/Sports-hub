@@ -7,7 +7,7 @@ function Squadhome() {
         squadNews()
         .then(({data})=>{
             setSquad(data)
-            console.log(data);
+            // console.log(data);
         })
     },[])
   return (
