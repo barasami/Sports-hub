@@ -4,18 +4,26 @@ import Newshome from './Components/News/Newshome';
 import Squadhome from './Components/Squad/Squadhome';
 import Transfarshome from './Components/Transfars/Transfarshome';
 import Tablehome from './Components/Table/Tablehome';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import { Fragment } from 'react';
+import Nav from './Components/Navigation/Nav';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <Fixturehome/>
-        <Newshome/>
-        <Squadhome/>
-        <Transfarshome/>
-        <Tablehome/>
-      </div>
-    </div>
+    <Router className="App">
+      <Fragment>
+        <Nav/>
+        <Routes>
+          <Route path='/' element={<Fixturehome/>}/>
+          <Route path='/news' element={<Newshome/>}/>
+          <Route path='/squad' element={<Squadhome/>}/>
+          <Route path='/transfers' element={<Transfarshome/>}/>
+          <Route path='/table'  element={<Tablehome/>}/>   
+        </Routes>
+        <Footer/>
+      </Fragment>
+    </Router>
   );
 }
 
