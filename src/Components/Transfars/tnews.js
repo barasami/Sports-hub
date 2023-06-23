@@ -1,17 +1,14 @@
 import axios from 'axios';
 
-const Url='https://transfermarket.p.rapidapi.com/search'
+const Url='https://football98.p.rapidapi.com/premierleague/transfers'
 
 const options = {
-  params: {
-    query: 'chelsea',
-    domain: 'de'
-  },
-  headers: {
-    'X-RapidAPI-Key': '87f0c01e35msh8962c83c8aef89ap1e9713jsnbf3fe9f2f818',
-    'X-RapidAPI-Host': 'transfermarket.p.rapidapi.com'
-  }
+    headers: {
+      'X-RapidAPI-Key': '87f0c01e35msh8962c83c8aef89ap1e9713jsnbf3fe9f2f818',
+      'X-RapidAPI-Host': 'football98.p.rapidapi.com'
+    }
 };
+
 
 
 export const nRomours=async()=>{

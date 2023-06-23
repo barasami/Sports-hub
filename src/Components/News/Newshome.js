@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { myNews } from './news'
+import './News.css'
 
 function Newshome() {
     const[news,setNews]=useState([])
@@ -9,36 +10,34 @@ function Newshome() {
             setNews(data)
         })
     },[])
+    const allnews=news?.news
+    const myallNews=allnews?.map(({fullNewsDate,id,newsFirstImage,newsHeadline,newsSecondImage,newsSource,newsSpotlightFirstImage
+    ,newsSpotlightSecondImage})=>{
 
-    const myalNews=news?.map(({Title,Image,NewsLink,PublisherDate,PublisherLogo,PublisherName})=>{
       return(
-        <div key={Title}>
+        <div key={id}>
+
           <div>
-            <div>
-              {Title}
-            </div>
-            <div>
-              {PublisherDate}
-            </div>
-            <div>
-              <img src={PublisherLogo} alt={PublisherName}/> <span>{PublisherName}</span>
-            </div>
-            <div>
-              <img src={Image} alt={PublisherName}/>
-            </div>
-            <div>
-              <a href={NewsLink}>Link</a>
-            </div>
+            <div>{newsHeadline}</div>
+            <div>{fullNewsDate}</div>
+            <div>{newsSource}</div>
+            <div><img src={newsFirstImage} alt={newsSource}/></div>
+            <div><img src={newsSecondImage} alt={newsSource}/></div>
+            <div><img src={newsSpotlightFirstImage} alt={newsSource}/></div>
+            <div><img src={newsSpotlightSecondImage} alt={newsSource}/></div>
           </div>
         </div>
+
       )
     })
 
+    
+
   return (
-    <div>
-      <h2>News</h2>
+    <div className='news'>
+      <h2 className='title'>News</h2>
       <div>
-        {myalNews}
+        {myallNews}
       </div>
     </div>
   )

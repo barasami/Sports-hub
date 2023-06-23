@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { nRomours } from './tnews'
+import './Transfers.css'
 
 function Transfarshome() {
     const[romour,setRomour]=useState([])
@@ -7,47 +8,31 @@ function Transfarshome() {
         nRomours()
         .then(({data})=>{
             setRomour(data)
-            
+            console.log(data);
         })
     },[])
 
-    const myclab=romour?.clubs
-    const myplayer=romour?.players
-
-    const clubs=myclab?.map(({competitionName,name,logoImage,id})=>{
-
-      return(
-        <tr key={id}>
-          <td><img src={logoImage} alt={name} /></td>
-          <td>{competitionName}</td>
-          <td>{name}</td>
-
-        </tr>
-      )
-
-    })
-
-    const players=myplayer?.map((data)=>{
-
-      const{playerImage,nationImage,playerName,club,id}=data
-      return(
-        <tr key={id}>
-          <td><img src={nationImage} alt={club}/></td>
-          <td><img src={playerImage} alt={club}/></td>
-          <td>{club}</td>
-          <td>{playerName}</td>
-        </tr>
-      )
-    })
+   const transFered=romour?.map(({newClub,oldClub,playerName,playerRole,price,transferDate,transferType
+})=>{
+    return(
+      <tr>
+        <tr>{transferDate}</tr>
+        <td>{oldClub}</td>
+        <td>{newClub}</td>
+        <td>{playerName}</td>
+        <td>{playerRole}</td>
+        <td>{price}</td>
+        <td>{transferType}</td>
+      </tr>
+    )
+   })
   return (
-    <div>
-      <h2>Transfers</h2>
+    <div className='transfers'>
+      <h2 className='heading'>Transfers</h2>
       <div>
-        {clubs}
+        {transFered}
       </div>
-      <div>
-        {players}
-      </div>
+      
     </div>
   )
 }

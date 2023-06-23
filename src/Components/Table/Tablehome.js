@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { tableNews } from './table'
+import './Table.css'
 
 function Tablehome() {
     const[table,setTable]=useState([])
@@ -7,28 +8,29 @@ function Tablehome() {
         tableNews()
         .then(({data})=>{
             setTable(data)
+            console.log(data);
         })
     },[])
 
-    let myTable=table?.map(({Name,Played,Position,Tie,Winned,Points,Loosed,SquadLogo})=>{
-      return(
-        <tr>
-          <td><img src={SquadLogo} alt={Name} /></td>
-          <td>{Name}</td>
-          <td>{Played}</td>
-          <td>{Winned}</td>
-          <td>{Tie}</td>
-          <td>{Loosed}</td>
-          <td>{Points}</td>
-          <td>{Position}</td>
-        </tr>
-      )
-    })
+   const Mytable=table?.map(({Tie,Winned,Position,Played,Points,Loosed,SquadLogo,Name})=>{
+    return(
+      <tr>
+        <td key={Name}><img src={SquadLogo} alt={Name}/></td>
+        <td>{Name}</td>
+        <td>{Played}</td>
+        <td>{Winned}</td>
+        <td>{Tie}</td>
+        <td>{Loosed}</td>
+        <td>{Position}</td>
+        <td>{Points}</td>
+      </tr>
+    )
+   }) 
   return (
-    <div>
-      <h2>Table</h2>
+    <div className='table'>
+      <h2 className='heading'>Table</h2>
       <div>
-        {myTable}
+        {Mytable}
       </div>
     </div>
   )

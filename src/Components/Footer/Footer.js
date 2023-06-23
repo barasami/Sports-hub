@@ -1,11 +1,12 @@
 import React from 'react'
+import './Footer.css'
 
 function Footer() {
-    const year=new Date().getFullYear()
+    const thisyear=new Date().getFullYear()
   return (
-    <div>
-        <div>
-            <p>&copy;Copyright{year}All football</p>
+    <div className='footer'>
+        <div className='foot'>
+            <p className='copy'>&copy;Copyright{thisyear}All football news</p>
         </div>
     </div>
   )

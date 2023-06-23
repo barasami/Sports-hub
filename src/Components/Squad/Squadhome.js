@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { squadNews } from './squad'
+import './Squad.css'
 
 function Squadhome() {
     const[squad,setSquad]=useState([])
@@ -10,25 +11,12 @@ function Squadhome() {
         })
     },[])
 
-    let coolSqd=squad?.map(({Winned,Tie,SquadLogo,Position,Points,Played,Name,Loosed})=>{
-      return(
-        <tr>
-          <td><img src={SquadLogo} alt={Name} /></td>
-          <td>{Name}</td>
-          <td>{Played}</td>
-          <td>{Winned}</td>
-          <td>{Tie}</td>
-          <td>{Loosed}</td>
-          <td>{Position}</td>
-          <td>{Points}</td>
-        </tr>
-      )
-    })
+    
   return (
-    <div>
-      <h2>Table</h2>
+    <div className='squad'>
+      <h2 className='heading'>Table</h2>
       <div>
-        {coolSqd}
+        
       </div>
     </div>
   )

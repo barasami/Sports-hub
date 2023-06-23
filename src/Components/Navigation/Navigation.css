@@ -14,3 +14,21 @@
     margin-right: 25%;
 
 }
+.links{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+.soccer{
+    animation: rotation 2s infinite linear;
+    color: seagreen;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

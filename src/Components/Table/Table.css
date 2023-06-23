@@ -1,0 +1,13 @@
+.table{
+    display: flex;
+    margin-top: 2em;
+    margin-left: 25em;
+    margin-right: 25em;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    letter-spacing: .2em;
+    font-weight: lighter;
+    
+}

@@ -1,17 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Navigation.css'
+import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 
 
 function Nav() {
   return (
     <div className='navigation'>
         <div className='nav'>
-           <div><Link to='/'>Home</Link></div> 
-           <div><Link to='/news'>News</Link></div> 
-           <div><Link to='/squad'>Squad</Link></div> 
-           <div><Link to='/transfers'>Transfers</Link></div> 
-           <div><Link to='/table'>Standing</Link></div> 
+          <div><SportsSoccerIcon color='inherit' className='soccer'/></div>
+           <div><Link to='/' className='links'>Home</Link></div> 
+           <div><Link to='/news' className='links'>News</Link></div> 
+           <div><Link to='/squad' className='links'>Squad</Link></div> 
+           <div><Link to='/transfers' className='links'>Transfers</Link></div> 
+           <div><Link to='/table' className='links'>Standing</Link></div> 
         </div>
     </div>
   )

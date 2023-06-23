@@ -1,11 +1,12 @@
 import axios from 'axios';
 
-const Url='https://football98.p.rapidapi.com/premierleague/news'
+const Url='https://transfermarket.p.rapidapi.com/news/list-latest'
 
 const options = {
+  params: {domain: 'com'},
   headers: {
     'X-RapidAPI-Key': '87f0c01e35msh8962c83c8aef89ap1e9713jsnbf3fe9f2f818',
-    'X-RapidAPI-Host': 'football98.p.rapidapi.com'
+    'X-RapidAPI-Host': 'transfermarket.p.rapidapi.com'
   }
 };
 
