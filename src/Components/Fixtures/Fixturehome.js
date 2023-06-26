@@ -24,6 +24,7 @@ function Fixturehome() {
           <td>{MatchDay}</td>
           <td><img src={homeLogo} alt={homeTeam} /></td>
           <td>{homeTeam}</td>
+          <td>V/s</td>
           <td><img src={awayLogo} alt={awayTeam} /></td>
           <td>{awayTeam}</td>
           <td>{MatchTime}</td>
