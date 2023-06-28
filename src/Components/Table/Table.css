@@ -5,9 +5,24 @@
     margin-right: 25em;
     align-items: center;
     justify-content: center;
+    margin-bottom: 4em;
 }
 .heading{
     letter-spacing: .2em;
     font-weight: lighter;
     
+}
+.imgs{
+    height: 1.7em;
+    border-radius: 50%;
+}
+.mytable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.tbl{
+    padding: .3em;
 }

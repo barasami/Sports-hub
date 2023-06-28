@@ -9,5 +9,16 @@
 .heading{
     letter-spacing: .2em;
     font-weight: lighter;
+    color: seagreen;
     
+}
+.cooltitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.rows{
+    padding: .2em;
 }

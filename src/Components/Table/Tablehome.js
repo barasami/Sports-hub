@@ -15,21 +15,23 @@ function Tablehome() {
    const Mytable=table?.map(({Tie,Winned,Position,Played,Points,Loosed,SquadLogo,Name})=>{
     return(
       <tr>
-        <td key={Name}><img src={SquadLogo} alt={Name}/></td>
-        <td>{Name}</td>
-        <td>{Played}</td>
-        <td>{Winned}</td>
-        <td>{Tie}</td>
-        <td>{Loosed}</td>
-        <td>{Position}</td>
-        <td>{Points}</td>
+        <td className='tbl' key={Name}><img className='imgs' src={SquadLogo} alt={Name}/></td>
+        <td className='tbl'>{Name}</td>
+        <td className='tbl'>{Played}</td>
+        <td className='tbl'>{Winned}</td>
+        <td className='tbl'>{Tie}</td>
+        <td className='tbl'>{Loosed}</td>
+        <td className='tbl'>{Position}</td>
+        <td className='tbl'>{Points}</td>
       </tr>
     )
    }) 
   return (
     <div className='table'>
-      <h2 className='heading'>Table</h2>
       <div>
+        <div className='mytable'>
+          <h2 className='heading'>Table</h2>
+        </div>
         {Mytable}
       </div>
     </div>

@@ -16,20 +16,22 @@ function Transfarshome() {
 })=>{
     return(
       <tr>
-        <tr>{transferDate}</tr>
-        <td>{oldClub}</td>
-        <td>{newClub}</td>
-        <td>{playerName}</td>
-        <td>{playerRole}</td>
-        <td>{price}</td>
-        <td>{transferType}</td>
+        <td className='rows'>{transferDate}</td>
+        <td className='rows'>{oldClub}</td>
+        <td className='rows'>{newClub}</td>
+        <td className='rows'>{playerName}</td>
+        <td className='rows'>{playerRole}</td>
+        <td className='rows'>{price}</td>
+        <td className='rows'>{transferType}</td>
       </tr>
     )
    })
   return (
     <div className='transfers'>
-      <h2 className='heading'>Transfers</h2>
       <div>
+        <div className='cooltitle'>
+          <h2 className='heading'>Transfers</h2>
+        </div>
         {transFered}
       </div>
       
