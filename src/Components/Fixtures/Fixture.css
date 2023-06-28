@@ -5,9 +5,38 @@
     margin-right: 25em;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3em;
+}
+.rounds{
+    text-transform: capitalize;
+    color: seagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-weight: lighter;
+    
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .heading{
     letter-spacing: .2em;
     font-weight: lighter;
-    
+    align-items: center;
+    color: seagreen;
+    text-decoration: underline;
+}
+.fixturedata{
+    font-size: small;
+}
+.img{
+    height: 2em;
+    border-radius: 50%;
+}
+.tr{
+    border-bottom: 1px solid purple;
 }

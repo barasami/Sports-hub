@@ -5,9 +5,32 @@
     margin-right: 25em;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3em;
 }
 .title{
     letter-spacing: .2em;
     font-weight: lighter;
     
+}
+.new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    color: seagreen;
+    text-decoration: underline;
+}
+.headline{
+    color: seagreen;
+    margin-bottom: .2em;
+    text-transform: uppercase;
+}
+.date{
+    margin-bottom: .2em;
+    font-style: italic;
+
+}
+.source{
+    color: purple;
+    margin-bottom: .1em;
 }

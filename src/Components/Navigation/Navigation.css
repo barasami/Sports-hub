@@ -10,18 +10,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 40%;
-    margin-right: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
 
 }
 .links{
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: lighter;
+    color: seagreen;
+
 }
 .soccer{
     animation: rotation 2s infinite linear;
-    color: seagreen;
+    color: purple;
 }
 
 @keyframes rotation {

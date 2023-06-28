@@ -16,15 +16,14 @@ function Newshome() {
 
       return(
         <div key={id}>
-
           <div>
-            <div>{newsHeadline}</div>
-            <div>{fullNewsDate}</div>
-            <div>{newsSource}</div>
-            <div><img src={newsFirstImage} alt={newsSource}/></div>
-            <div><img src={newsSecondImage} alt={newsSource}/></div>
-            <div><img src={newsSpotlightFirstImage} alt={newsSource}/></div>
-            <div><img src={newsSpotlightSecondImage} alt={newsSource}/></div>
+            <div className='headline'>{newsHeadline}</div>
+            <div className='date'>{fullNewsDate}</div>
+            <div className='source'>{newsSource}</div>
+            <div><img className='imgs' src={newsFirstImage} alt={newsSource}/></div>
+            <div><img className='imgs' src={newsSecondImage} alt={newsSource}/></div>
+            <div><img className='imgs' src={newsSpotlightFirstImage} alt={newsSource}/></div>
+            <div><img className='imgs' src={newsSpotlightSecondImage} alt={newsSource}/></div>
           </div>
         </div>
 
@@ -35,8 +34,11 @@ function Newshome() {
 
   return (
     <div className='news'>
-      <h2 className='title'>News</h2>
+      
       <div>
+        <div className='new'>
+          <h2 className='title'>News</h2>
+        </div>
         {myallNews}
       </div>
     </div>

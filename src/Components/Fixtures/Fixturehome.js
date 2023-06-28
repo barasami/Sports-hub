@@ -29,12 +29,11 @@ function Fixturehome() {
 
     let myFirst=firstOut?.map(({MatchDay,MatchTime,awayLogo,awayTeam,homeLogo,homeTeam})=>{
       return(
-        <tr>
+        <tr className='fixturedata'>
           <td>{MatchDay}</td>
-          <td><img src={homeLogo} alt={homeTeam} /></td>
+          <td><img className='img' src={homeLogo} alt={homeTeam} /></td>
           <td>{homeTeam}</td>
-          <td>V/s</td>
-          <td><img src={awayLogo} alt={awayTeam} /></td>
+          <td><img className='img' src={awayLogo} alt={awayTeam} /></td>
           <td>{awayTeam}</td>
           <td>{MatchTime}</td>
         </tr>
@@ -45,12 +44,11 @@ function Fixturehome() {
 
     let mySecond=secondOut?.map(({MatchDay,MatchTime,awayLogo,awayTeam,homeLogo,homeTeam})=>{
       return(
-        <tr>
+        <tr className='fixturedata'>
           <td>{MatchDay}</td>
-          <td><img src={homeLogo} alt={homeTeam} /></td>
+          <td><img className='img' src={homeLogo} alt={homeTeam} /></td>
           <td>{homeTeam}</td>
-          <td>V/s</td>
-          <td><img src={awayLogo} alt={awayTeam} /></td>
+          <td><img className='img' src={awayLogo} alt={awayTeam} /></td>
           <td>{awayTeam}</td>
           <td>{MatchTime}</td>
         </tr>
@@ -62,12 +60,11 @@ function Fixturehome() {
 
     let myThird=thirdOut?.map(({MatchDay,MatchTime,awayLogo,awayTeam,homeLogo,homeTeam})=>{
       return(
-        <tr>
+        <tr className='fixturedata'>
           <td>{MatchDay}</td>
-          <td><img src={homeLogo} alt={homeTeam} /></td>
+          <td><img className='img' src={homeLogo} alt={homeTeam} /></td>
           <td>{homeTeam}</td>
-          <td>V/s</td>
-          <td><img src={awayLogo} alt={awayTeam} /></td>
+          <td><img className='img' src={awayLogo} alt={awayTeam} /></td>
           <td>{awayTeam}</td>
           <td>{MatchTime}</td>
         </tr>
@@ -77,15 +74,20 @@ function Fixturehome() {
    
   return (
     <div className='fixture'>
-      <h2 className='heading'>Fixture</h2>
       <div>
-        <div>
-        {myFirst}
+        <div className='head'>
+          <h2 className='heading'>Fixture</h2>
         </div>
         <div>
+          <div className='rounds'>First Round</div>
+          {myFirst}
+        </div>
+        <div>
+          <div className='rounds'>Second Round</div>
           {mySecond}
         </div>
         <div>
+          <div className='rounds'>Third Round</div>
           {myThird}
         </div>
       </div>
