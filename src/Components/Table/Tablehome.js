@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { tableNews } from './table'
 import './Table.css'
+import Tableform from '../Forms/Tableform'
 
 function Tablehome() {
     const[table,setTable]=useState([])
+    const[oldTable,setOldtable]=useState('premierleague')
     useEffect(()=>{
-        tableNews()
+        tableNews(oldTable)
         .then(({data})=>{
             setTable(data)
             console.log(data);
         })
-    },[])
+    },[oldTable])
+
+    const getLeague=(data)=>{
+      setOldtable(data);
+    }
 
    const Mytable=table?.map(({Tie,Winned,Position,Played,Points,Loosed,SquadLogo,Name})=>{
     return(
@@ -31,6 +37,9 @@ function Tablehome() {
       <div>
         <div className='mytable'>
           <h2 className='heading'>Table</h2>
+        </div>
+        <div className='tform'>
+          <Tableform getLeague={getLeague}/>
         </div>
         {Mytable}
       </div>

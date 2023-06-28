@@ -26,3 +26,10 @@
 .tbl{
     padding: .3em;
 }
+.tform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .3em;
+    margin-bottom: 1em;
+}

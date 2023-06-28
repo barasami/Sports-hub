@@ -37,6 +37,10 @@
     height: 2em;
     border-radius: 50%;
 }
-.tr{
-    border-bottom: 1px solid purple;
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2em;
+   
 }

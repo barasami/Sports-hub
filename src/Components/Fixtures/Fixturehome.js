@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { myFixture } from './fixture'
 import './Fixture.css'
+import Fixtureform from '../Forms/Fixtureform'
 
 function Fixturehome() {
   const[fixture,setFixture]=useState([])
+  const[oldfixture,setOldficture]=useState('premierleague')
     useEffect(()=>{
-        myFixture()
+        myFixture(oldfixture)
         .then(({data})=>{
             setFixture(data)
             console.log(data);
         })
-    },[])
+    },[oldfixture])
+
+    const searchFixture=(data)=>{
+      setOldficture(data);
+    }
 
     
     let myallfix=Object.entries(fixture[0] || {})
@@ -77,6 +83,9 @@ function Fixturehome() {
       <div>
         <div className='head'>
           <h2 className='heading'>Fixture</h2>
+        </div>
+        <div className='form'>
+          <Fixtureform searchFixture={searchFixture}/>
         </div>
         <div>
           <div className='rounds'>First Round</div>

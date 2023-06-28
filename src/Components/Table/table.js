@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const Url='https://football98.p.rapidapi.com/premierleague/table'
+
 
 const options = {
     headers: {
@@ -9,9 +9,9 @@ const options = {
     }
   };
 
-export const tableNews=async()=>{
+export const tableNews=async(oldTable)=>{
     try{
-        const data=await axios.get(Url,options)
+        const data=await axios.get(`https://football98.p.rapidapi.com/${oldTable}/table`,options)
         return data
     }
     catch(err){
