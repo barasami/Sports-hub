@@ -11,7 +11,6 @@ function Nav() {
           <div><SportsSoccerIcon color='inherit' className='soccer'/></div>
            <div><Link to='/' className='links'>Home</Link></div> 
            <div><Link to='/news' className='links'>News</Link></div> 
-           <div><Link to='/squad' className='links'>Squad</Link></div> 
            <div><Link to='/transfers' className='links'>Transfers</Link></div> 
            <div><Link to='/table' className='links'>Standing</Link></div> 
         </div>

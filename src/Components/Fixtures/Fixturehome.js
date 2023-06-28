@@ -29,7 +29,7 @@ function Fixturehome() {
 
     let myFirst=firstOut?.map(({MatchDay,MatchTime,awayLogo,awayTeam,homeLogo,homeTeam})=>{
       return(
-        <tr className='fixturedata'>
+        <tr key={homeTeam} className='fixturedata'>
           <td>{MatchDay}</td>
           <td><img className='img' src={homeLogo} alt={homeTeam} /></td>
           <td>{homeTeam}</td>
@@ -44,7 +44,7 @@ function Fixturehome() {
 
     let mySecond=secondOut?.map(({MatchDay,MatchTime,awayLogo,awayTeam,homeLogo,homeTeam})=>{
       return(
-        <tr className='fixturedata'>
+        <tr key={homeTeam} className='fixturedata'>
           <td>{MatchDay}</td>
           <td><img className='img' src={homeLogo} alt={homeTeam} /></td>
           <td>{homeTeam}</td>
@@ -60,7 +60,7 @@ function Fixturehome() {
 
     let myThird=thirdOut?.map(({MatchDay,MatchTime,awayLogo,awayTeam,homeLogo,homeTeam})=>{
       return(
-        <tr className='fixturedata'>
+        <tr key={homeTeam} className='fixturedata'>
           <td>{MatchDay}</td>
           <td><img className='img' src={homeLogo} alt={homeTeam} /></td>
           <td>{homeTeam}</td>

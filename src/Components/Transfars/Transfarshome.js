@@ -15,7 +15,7 @@ function Transfarshome() {
    const transFered=romour?.map(({newClub,oldClub,playerName,playerRole,price,transferDate,transferType
 })=>{
     return(
-      <tr>
+      <tr key={playerName}>
         <td className='rows'>{transferDate}</td>
         <td className='rows'>{oldClub}</td>
         <td className='rows'>{newClub}</td>

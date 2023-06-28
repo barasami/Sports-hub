@@ -14,7 +14,7 @@ function Tablehome() {
 
    const Mytable=table?.map(({Tie,Winned,Position,Played,Points,Loosed,SquadLogo,Name})=>{
     return(
-      <tr>
+      <tr key={Name}>
         <td className='tbl' key={Name}><img className='imgs' src={SquadLogo} alt={Name}/></td>
         <td className='tbl'>{Name}</td>
         <td className='tbl'>{Played}</td>
