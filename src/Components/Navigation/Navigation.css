@@ -22,7 +22,7 @@
 }
 .soccer{
     animation: rotation 2s infinite linear;
-    color: purple;
+    color: seagreen;
 }
 
 @keyframes rotation {
@@ -32,4 +32,4 @@
     to {
       transform: rotate(359deg);
     }
-  }
+}

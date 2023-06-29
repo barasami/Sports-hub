@@ -44,3 +44,8 @@
     margin-top: 1.2em;
    
 }
+.circular{
+    top: 50%;
+    left: 50%;
+    position: fixed;
+}

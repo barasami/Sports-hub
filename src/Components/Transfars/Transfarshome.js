@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { nRomours } from './tnews'
 import './Transfers.css'
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Transfarshome() {
     const[romour,setRomour]=useState([])
+    const[load,setload]=useState(false)
     useEffect(()=>{
+        setload(true)
         nRomours()
         .then(({data})=>{
             setRomour(data)
-            console.log(data);
+            setload(false);
         })
     },[])
 
@@ -32,7 +35,11 @@ function Transfarshome() {
         <div className='cooltitle'>
           <h2 className='heading'>Transfers</h2>
         </div>
-        {transFered}
+        <div>
+          {load ? <CircularProgress color='success' className='circular'/> : <div>
+          {transFered}
+          </div>}
+        </div>
       </div>
       
     </div>

@@ -12,13 +12,13 @@ function Tableform({getLeague}) {
     }
   return (
     <div>
-        <form onSubmit={SubmitMe}>
-            <div>
-                <input type='text' placeholder='League ' 
-                value={league} onChange={(e)=>setLeague(e.target.value)}/>
+        <form onSubmit={SubmitMe} className='form'>
+            <div className='mytext'>
+                <input type='text' placeholder='League Type ' 
+                value={league} onChange={(e)=>setLeague(e.target.value)} className='input'/>
             </div>
-            <div>
-                <button>Search</button>
+            <div className='mybtn'>
+                <button className='btn'>Search</button>
             </div>
         </form>
     </div>

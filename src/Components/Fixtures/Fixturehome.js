@@ -2,15 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { myFixture } from './fixture'
 import './Fixture.css'
 import Fixtureform from '../Forms/Fixtureform'
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Fixturehome() {
   const[fixture,setFixture]=useState([])
   const[oldfixture,setOldficture]=useState('premierleague')
+  const[load,setLoad]=useState(true)
     useEffect(()=>{
+        setLoad(true)
         myFixture(oldfixture)
         .then(({data})=>{
             setFixture(data)
-            console.log(data);
+            setLoad(false)
         })
     },[oldfixture])
 
@@ -87,18 +90,21 @@ function Fixturehome() {
         <div className='form'>
           <Fixtureform searchFixture={searchFixture}/>
         </div>
-        <div>
-          <div className='rounds'>First Round</div>
-          {myFirst}
-        </div>
-        <div>
-          <div className='rounds'>Second Round</div>
-          {mySecond}
-        </div>
-        <div>
-          <div className='rounds'>Third Round</div>
-          {myThird}
-        </div>
+        {load ? <CircularProgress color='success' className='circular'/> :
+          <div>
+            <div>
+              <div className='rounds'>First Round</div>
+              {myFirst}
+            </div>
+            <div>
+              <div className='rounds'>Second Round</div>
+              {mySecond}
+            </div>
+            <div>
+              <div className='rounds'>Third Round</div>
+              {myThird}
+            </div>
+        </div>}
       </div>
     </div>
   )

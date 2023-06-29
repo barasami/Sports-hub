@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const Url='https://football98.p.rapidapi.com/premierleague/fixtures'
+
 const options = {
     headers: {
       'X-RapidAPI-Key': '87f0c01e35msh8962c83c8aef89ap1e9713jsnbf3fe9f2f818',
@@ -11,9 +11,9 @@ const options = {
 
 
 
-export const myFixture=async()=>{
+export const myFixture=async(oldfixture)=>{
     try{
-        const data=await axios.get(Url,options)
+        const data=await axios.get(`https://football98.p.rapidapi.com/${oldfixture}/fixtures`,options)
         return data
     }
     catch(err){

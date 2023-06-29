@@ -13,14 +13,14 @@ function Fixtureform({searchFixture}) {
     }
   return (
     <div>
-       <form onSubmit={submitMe}>
-            <div>
-                <input type='text' placeholder='League type'
+       <form onSubmit={submitMe} className='form'>
+            <div className='mytext'>
+                <input type='text' placeholder='League type' className='input'
                  value={league} onChange={(e)=>setLeague(e.target.value)}
                 />
             </div>
-            <div>
-                <button>Search</button>
+            <div className='mybtn'>
+                <button className='btn'>Search</button>
             </div>
        </form>
     </div>

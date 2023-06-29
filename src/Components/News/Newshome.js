@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { myNews } from './news'
 import './News.css'
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Newshome() {
     const[news,setNews]=useState([])
+    const[load,setLoad]=useState(true)
     useEffect(()=>{
+        setLoad(true)
         myNews()
         .then(({data})=>{
             setNews(data)
+            setLoad(false)
         })
     },[])
     const allnews=news?.news
@@ -39,7 +43,10 @@ function Newshome() {
         <div className='new'>
           <h2 className='title'>News</h2>
         </div>
-        {myallNews}
+        {load ? <CircularProgress color='success' className='circular'/> : 
+        <div>
+          {myallNews}
+          </div>}
       </div>
     </div>
   )

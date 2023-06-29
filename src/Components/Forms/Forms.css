@@ -1,0 +1,25 @@
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    padding: .2em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid seagreen;
+}
+.btn{
+    padding: .4em;
+    background-color: seagreen;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+.mytext{
+    padding: 1em;
+}
+.mybtm{
+    padding: 1em;
+}

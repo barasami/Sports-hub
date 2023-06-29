@@ -2,15 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { tableNews } from './table'
 import './Table.css'
 import Tableform from '../Forms/Tableform'
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Tablehome() {
     const[table,setTable]=useState([])
     const[oldTable,setOldtable]=useState('premierleague')
+    const[load,setload]=useState(false)
     useEffect(()=>{
+        setload(true)
         tableNews(oldTable)
         .then(({data})=>{
             setTable(data)
-            console.log(data);
+            setload(false);
         })
     },[oldTable])
 
@@ -41,7 +44,9 @@ function Tablehome() {
         <div className='tform'>
           <Tableform getLeague={getLeague}/>
         </div>
+        {load ? <CircularProgress color='success' className='circular'/> : <div>
         {Mytable}
+        </div>}
       </div>
     </div>
   )

@@ -34,3 +34,8 @@
     color: purple;
     margin-bottom: .1em;
 }
+.circular{
+    top: 50%;
+    left: 50%;
+    position: fixed;
+}
